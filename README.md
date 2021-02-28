@@ -13,7 +13,7 @@ Publish artifacts to Nexus Repository.
     filename: '${{ github.workspace }}\my-app.zip'
 ```
 
-> If the file already exists at the provided uri, it will be overwritten.
+> If a file with the same name already exists at the provided uri, it will be overwritten.
 
 ## Requirements
 This GitHub Action is compatible with Windows based runners only. If you are looking for a Linux based version, please visit [sonatype-nexus-community/nexus-repo-github-action](https://github.com/sonatype-nexus-community/nexus-repo-github-action).
