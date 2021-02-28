@@ -25,10 +25,10 @@ runs:
   using: 'composite'
   steps:
     - run: |
-        $uri = New-Object System.Uri("${{ github.uri }}")
-        $file = "${{ github.filename }}"
-        $userName = "${{ github.username }}"
-        $password = ConvertTo-SecureString "${{ github.password }}" -AsPlainText -Force
+        $uri = New-Object System.Uri("${{ inputs.uri }}")
+        $file = "${{ inputs.filename }}"
+        $userName = "${{ inputs.username }}"
+        $password = ConvertTo-SecureString "${{ inputs.password }}" -AsPlainText -Force
         $credential = New-Object System.Management.Automation.PSCredential ($userName, $password)
         Invoke-WebRequest -Uri $uri -InFile $file -Method Put -Credential $credential -UseBasicParsing
       shell: powershell
