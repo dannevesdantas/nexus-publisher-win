@@ -13,16 +13,7 @@ Publish artifacts to Nexus Repository.
     filename: '${{ github.workspace }}\my-app.zip'
 ```
 
-## Specifying folder path
-You can specify an optional folder path to search for AssemblyInfo.cs or AssemblyInfo.vb files. The default value is ${{ github.workspace }}
-
-```yml
-- name: Set version on AssemblyInfo.cs
-  uses: dannevesdantas/set-version-assemblyinfo-win@v0.1.4
-  with:
-    version: '3.2.0'
-    path: '${{ github.workspace }}/MyProject/App'
-```
+> If the file already exists at the provided uri, it will be overwritten.
 
 ## Requirements
 This GitHub Action is compatible with Windows based runners only. If you are looking for a Linux based version, please visit [sonatype-nexus-community/nexus-repo-github-action](https://github.com/sonatype-nexus-community/nexus-repo-github-action).
