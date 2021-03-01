@@ -17,9 +17,6 @@ inputs:
   filename:
     description: 'Folder location to search for AssemblyInfo.cs or AssemblyInfo.vb files'
     required: true
-outputs:
-  msbuildPath:
-    description: 'The resulting location of msbuild for your inputs'
 
 runs:
   using: 'composite'
@@ -32,3 +29,4 @@ runs:
         $credential = New-Object System.Management.Automation.PSCredential ($userName, $password)
         Invoke-WebRequest -Uri $uri -InFile $file -Method Put -Credential $credential -UseBasicParsing
       shell: powershell
+      
