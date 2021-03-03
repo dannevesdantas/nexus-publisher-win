@@ -5,7 +5,7 @@ Publish artifacts to Nexus Repository.
 
 ```yml
 - name: Publish to Nexus
-  uses: dannevesdantas/nexus-publisher-win@v0.1.1
+  uses: dannevesdantas/nexus-publisher-win@v0.1.2
   with:
     uri: 'http://nexus.mycompany.com/repository/team/my-app/my-app/3.2.0/my-app-3.2.0.zip'
     username: ${{ secrets.NEXUS_USERNAME }}
