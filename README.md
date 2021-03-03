@@ -18,6 +18,9 @@ Publish artifacts to Nexus Repository.
 ## Requirements
 This GitHub Action is compatible with Windows based runners only. If you are looking for a Linux based version, please visit [sonatype-nexus-community/nexus-repo-github-action](https://github.com/sonatype-nexus-community/nexus-repo-github-action).
 
+## Troubleshooting
+If you receive an `Invoke-WebRequest : The response content cannot be parsed because the Internet Explorer engine is not available` error message, make sure you've opened Internet Explorer at least once in the runner's machine, and dismissed the run-once pop-up. For more details, please visit [Solving the First-Launch Configuration Error with PowerShell’s Invoke-WebRequest Cmdlet](https://wahlnetwork.com/2015/11/17/solving-the-first-launch-configuration-error-with-powershells-invoke-webrequest-cmdlet/).
+
 # License
 
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
